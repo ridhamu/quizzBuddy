@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss"; 
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@theme {
+    /* fonts */
+    --font-main: "Outfit", "Sans-serif"; 
+
+
+    /* color */
+    --color-dblue: #191D63; 
+    --color-cblack: #060710; 
+    --color-cred: #A40021; 
+    --color-cgreen: #31CD63; 
+    --color-cgreen2: #20BA6E; 
+    --color-soft: #F4F3F6; 
+    --color-tsecondary: #757575;
+    --color-bgall: #EDE8E3; 
+}
