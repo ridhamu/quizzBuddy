@@ -3,19 +3,23 @@ logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+
+# Local env files
+.env
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -23,11 +27,13 @@ dist-ssr
 *.sln
 *.sw?
 
+# Misc
+*.local
 
-#env files
-.env
-.env
+# Optional: lock files (usually you want to keep these though)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
 
-
- .flowbite-react
- .vscode
+# Flowbite React (if this is a folder with build or cache files)
+.flowbite-react/
