@@ -8,6 +8,7 @@ import { FaCheck } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { MdOutlineNavigateNext } from 'react-icons/md';
 import { Link } from 'react-router';
+import { useTimer } from '../hooks/useTimer';
 
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array];
@@ -27,11 +28,18 @@ export default function Question() {
   const [selected, setSelected] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
   const { currentNumber, questions, dispatch, totalCorrect } = useQuiz();
-  console.log(
-    `current number:  ${currentNumber}\n n-1: ${
-      questions.length - 1
-    }\n is it same: ${currentNumber === questions.length - 1}`
+  const { timeLeft } = useTimer(
+    status === 'active',
+    () => dispatch({ type: 'questions/finish' }),
+    300 // 5 menit
   );
+
+  // debuggg
+  // console.log(
+  //   `current number:  ${currentNumber}\n n-1: ${
+  //     questions.length - 1
+  //   }\n is it same: ${currentNumber === questions.length - 1}`
+  // );
 
   const options = useMemo(() => {
     const opts = [
@@ -97,7 +105,9 @@ export default function Question() {
             alt="score image"
             className="size-6 md:size-8"
           />
-          <span className="text-dblue md:text-lg">{(totalCorrect/questions.length) * 100}</span>
+          <span className="text-dblue md:text-lg">
+            {(totalCorrect / questions.length) * 100}
+          </span>
         </div>
 
         {/* quiz name */}
@@ -108,10 +118,14 @@ export default function Question() {
         </div>
 
         {/* exit button */}
-        <Link to="/" className="bg-white flex items-center justify-center rounded-full p-2 hover:shadow-lg transition ease-in-out cursor-pointer">
+        <Link
+          to="/"
+          className="bg-white flex items-center justify-center rounded-full p-2 hover:shadow-lg transition ease-in-out cursor-pointer"
+        >
           <BiExit className="text-dblue size-5 md:size-8" />
         </Link>
       </div>
+
 
       {/* progres bar mobile */}
       <div className="md:hidden w-full py-2 mx-auto flex items-center justify-center ">
@@ -126,6 +140,11 @@ export default function Question() {
             {currentNumber! + 1}/{questions.length}
           </span>
         </div>
+      </div>
+
+      {/* timer */}
+      <div className="bg-white px-4 py-1 rounded-lg text-dblue text-md font-semibold">
+        ⏳ {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
       </div>
 
       {/* questions box */}
