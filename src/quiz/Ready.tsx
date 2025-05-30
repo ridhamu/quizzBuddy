@@ -16,7 +16,7 @@ export default function Ready() {
       </h1>
       <button
         onClick={handleStartQuiz}
-        className="text-center font-main text-dblue text-2xl md:text-3xl font-normal outline-2 outline-dblue py-1 px-4 rounded-lg hover:cursor-pointer hover:text-bgall hover:outline-transparent hover:bg-dblue hover:shadow-xl animate-pulse hover:animate-none"
+        className="text-center font-main text-dblue text-2xl md:text-3xl font-normal outline-2 outline-dblue py-2 px-8 rounded-lg hover:cursor-pointer hover:text-bgall hover:outline-transparent hover:bg-dblue hover:shadow-xl animate-pulse hover:animate-none"
       >
         Take Your Quiz
       </button>

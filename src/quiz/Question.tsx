@@ -7,6 +7,7 @@ import { useMemo, useState } from 'react';
 import { FaCheck } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { MdOutlineNavigateNext } from 'react-icons/md';
+import { Link } from 'react-router';
 
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array];
@@ -25,7 +26,7 @@ export default function Question() {
   // const [selected, setSelected] = useState('');
   const [selected, setSelected] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
-  const { currentNumber, questions, dispatch } = useQuiz();
+  const { currentNumber, questions, dispatch, totalCorrect } = useQuiz();
   console.log(
     `current number:  ${currentNumber}\n n-1: ${
       questions.length - 1
@@ -96,7 +97,7 @@ export default function Question() {
             alt="score image"
             className="size-6 md:size-8"
           />
-          <span className="text-dblue md:text-lg">100</span>
+          <span className="text-dblue md:text-lg">{(totalCorrect/questions.length) * 100}</span>
         </div>
 
         {/* quiz name */}
@@ -107,9 +108,9 @@ export default function Question() {
         </div>
 
         {/* exit button */}
-        <button className="bg-white flex items-center justify-center rounded-full p-2 hover:shadow-lg transition ease-in-out cursor-pointer">
+        <Link to="/" className="bg-white flex items-center justify-center rounded-full p-2 hover:shadow-lg transition ease-in-out cursor-pointer">
           <BiExit className="text-dblue size-5 md:size-8" />
-        </button>
+        </Link>
       </div>
 
       {/* progres bar mobile */}
