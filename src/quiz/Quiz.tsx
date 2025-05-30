@@ -12,7 +12,7 @@ export default function Quiz() {
     <div className="w-full h-dvh bg-bgall overflow-y-auto">
       {status === 'loading' && <Loading />}
       {status === 'ready' && <Ready />}
-      {status === 'active' && <Question />}
+      {status === 'active' && <Question />} 
       {status === 'finish' && <Result />}
       {status === 'error' && <ErrorQuiz />}
     </div>
