@@ -1,6 +1,6 @@
-# QuizzBuddy
+# [<u>QuizzBuddy</u>](https://quizzbuddy-production.up.railway.app/)
 
-Welcome to **QuizzBuddy** — your fun, interactive quiz companion!  
+Welcome to [<u>**QuizzBuddy**</u>](https://quizzbuddy-production.up.railway.app/) — your fun, interactive quiz companion!  
 Sharpen your mind with a variety of trivia questions, timed challenges, and an intuitive interface designed for seamless quizzing on any device.
 
 ---
@@ -42,7 +42,7 @@ Sharpen your mind with a variety of trivia questions, timed challenges, and an i
 
 4. Open your browser at `http://localhost:3000` to start quizzing!
 
-5. Or you can just visit here(already deployed): xxxx
+5. Or you can just visit here(already deployed): [<u>https://quizzbuddy-production.up.railway.app</u>](https://quizzbuddy-production.up.railway.app)
 
 ---
 
@@ -97,4 +97,4 @@ Happy quizzing! 🎉
 
 ---
 
-**Developed with ❤️ by Muhammad Ridha**
+**Developed with ❤️ by [<u>Muhammad Ridha</u>](https://github.com/ridhamu)**
