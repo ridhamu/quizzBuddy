@@ -1,5 +1,9 @@
 # [<u>QuizzBuddy</u>](https://quizzbuddy-production.up.railway.app/)
 
+![alt text](Banner.png "optional title")
+
+---
+
 Welcome to [<u>**QuizzBuddy**</u>](https://quizzbuddy-production.up.railway.app/) — your fun, interactive quiz companion!  
 Sharpen your mind with a variety of trivia questions, timed challenges, and an intuitive interface designed for seamless quizzing on any device.
 
